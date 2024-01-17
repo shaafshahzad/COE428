@@ -1,0 +1,35 @@
+**/REGULAR SORT/**
+
+compile sortMain.c and mySort.c
+**
+gcc -c sortMain.c
+gcc -c mySort.c
+**
+
+link objects to testSort executable
+**
+gcc -o testSort mySort.o sortMain.o
+**
+
+run testSort executable
+**
+./testSort
+**
+
+
+**/COMMAND LINE SORT/***
+compile sortMain2.c and mySort.c
+**
+gcc -c sortMain2.c 
+gcc -c mySort.c
+**
+
+link objects to testSort2 executable
+**
+gcc -o testSort2 mySort.o sortMain2.o
+**
+
+run testSort2 executable
+**
+./testSort2 [arguments]
+**
