@@ -27,8 +27,8 @@ void mySort(int d[], unsigned int n){
   // merge both halves back into one
   int i=0, j=0, k=0;
   
-  while (i < leftSize && j < rightSize){
-    if (left[i] <= right[j]){
+  while (i < leftSize && j < rightSize) {
+    if (left[i] <= right[j]) {
       d[k++] = left[i++];
     } else {
       d[k++] = right[j++];
@@ -36,10 +36,10 @@ void mySort(int d[], unsigned int n){
   }
 
   // merge any leftover array elements into data
-  while (i < leftSize){
+  while (i < leftSize) {
     d[k++] = left[i++];
   }
-  while (j < rightSize){
+  while (j < rightSize) {
     d[k++] = right[j++];
   }
   
