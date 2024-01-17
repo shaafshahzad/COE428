@@ -1,10 +1,10 @@
 void mySort(int d[], unsigned int n){
 
   // if array is empty or has one element, it is already sorted
-  if (n <= 1)
+  if (n <= 1) {
     return;
+  }
 
-  
   // set up the left and right side arrays
   int mid = n / 2;
   int leftSize = mid;
@@ -13,10 +13,12 @@ void mySort(int d[], unsigned int n){
   int right[rightSize];
 
   // copy data into these new arrays
-  for (int i=0; i < mid; i++)
+  for (int i=0; i < mid; i++) {
     left[i] = d[i];
-  for (int i=0; i < n; i++)
+  }
+  for (int i=0; i < n; i++){
     right[i - mid] = d[i];
+  }
 
   // merge sort both halves
   mySort(left, leftSize);
