@@ -1,5 +1,4 @@
 **/REGULAR SORT/**
-
 compile sortMain.c and mySort.c
 **
 gcc -c sortMain.c

@@ -13,10 +13,10 @@ void mySort(int d[], unsigned int n){
   int right[rightSize];
 
   // copy data into these new arrays
-  for (int i=0; i < mid; i++) {
+  for (int i = 0; i < mid; i++) {
     left[i] = d[i];
   }
-  for (int i=0; i < n; i++){
+  for (int i = 0; i < n; i++){
     right[i - mid] = d[i];
   }
 
@@ -25,7 +25,7 @@ void mySort(int d[], unsigned int n){
   mySort(right, rightSize);
 
   // merge both halves back into one
-  int i=0, j=0, k=0;
+  int i = 0, j = 0, k = 0;
   
   while (i < leftSize && j < rightSize) {
     if (left[i] <= right[j]) {
