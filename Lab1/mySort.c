@@ -1,7 +1,9 @@
-void mySort(int d[], unsigned int n){
+void mySort(int d[], unsigned int n)
+{
 
   // if array is empty or has one element, it is already sorted
-  if (n <= 1) {
+  if (n <= 1)
+  {
     return;
   }
 
@@ -13,10 +15,12 @@ void mySort(int d[], unsigned int n){
   int right[rightSize];
 
   // copy data into these new arrays
-  for (int i = 0; i < mid; i++) {
+  for (int i = 0; i < mid; i++)
+  {
     left[i] = d[i];
   }
-  for (int i = 0; i < n; i++){
+  for (int i = 0; i < n; i++)
+  {
     right[i - mid] = d[i];
   }
 
@@ -26,21 +30,26 @@ void mySort(int d[], unsigned int n){
 
   // merge both halves back into one
   int i = 0, j = 0, k = 0;
-  
-  while (i < leftSize && j < rightSize) {
-    if (left[i] <= right[j]) {
+
+  while (i < leftSize && j < rightSize)
+  {
+    if (left[i] <= right[j])
+    {
       d[k++] = left[i++];
-    } else {
+    }
+    else
+    {
       d[k++] = right[j++];
     }
   }
 
   // merge any leftover array elements into data
-  while (i < leftSize) {
+  while (i < leftSize)
+  {
     d[k++] = left[i++];
   }
-  while (j < rightSize) {
+  while (j < rightSize)
+  {
     d[k++] = right[j++];
   }
-  
 }
