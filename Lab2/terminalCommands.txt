@@ -1,0 +1,8 @@
+gcc -c towers.c
+gcc -c towersMain.c
+
+gcc -o towers towers.c towersMain.c
+
+./towers
+./towers > junk1
+./towers 2> details > pureStdout

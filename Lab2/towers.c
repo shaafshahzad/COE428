@@ -17,12 +17,13 @@ void towers(unsigned int n, unsigned int from, unsigned int dest)
     showRecursionDepth();
     fprintf(stderr, "towers(%d, %d, %d)\n", n, from, dest);
     depth++;
-    if (n != 0) {
-        towers(n-1, from, spare);
+    if (n != 0)
+    {
+        towers(n - 1, from, spare);
         showRecursionDepth();
         fprintf(stderr, "Move #%d: From Tower %d to Tower %d\n", ++moveNumber, from, dest);
         printf("%d %d\n", from, dest);
-        towers(n-1, spare, dest);
+        towers(n - 1, spare, dest);
     }
     depth--;
 }
@@ -30,6 +31,6 @@ void towers(unsigned int n, unsigned int from, unsigned int dest)
 static void showRecursionDepth()
 {
     int i;
-    for(i = 0; i < depth; i++)
+    for (i = 0; i < depth; i++)
         fprintf(stderr, "..");
 }
