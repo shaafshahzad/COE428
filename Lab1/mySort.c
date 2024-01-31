@@ -31,6 +31,7 @@ void mySort(int d[], unsigned int n)
   // merge both halves back into one
   int i = 0, j = 0, k = 0;
 
+  // if left less than or equal to right, add left to data, else add right to data
   while (i < leftSize && j < rightSize)
   {
     if (left[i] <= right[j])
