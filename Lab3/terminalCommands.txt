@@ -1,0 +1,5 @@
+make
+make clear
+
+./insertionSort < data.txt
+./mergeSort < data.txt
