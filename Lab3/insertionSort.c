@@ -9,7 +9,6 @@ void mySort(int array[], unsigned int first, unsigned int last)
 	for (i = 1; i <= last; i++)
 	{
 		// copy the value of the current element to the key
-
 		myCopy(&array[i], &key);
 		j = i - 1;
 

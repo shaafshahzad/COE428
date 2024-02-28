@@ -3,7 +3,7 @@
 
 void mySort(int array[], unsigned int first, unsigned int last)
 {
-    // if array is empty or has one element, it is already sorted
+    // if array is empty or has one element then its already sorted
     if (first >= last)
     {
         return;
