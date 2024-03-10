@@ -20,7 +20,7 @@ void mySort(int array[], unsigned int first, unsigned int last)
     unsigned int rightSize = last - middle;
     int left[leftSize], right[rightSize];
 
-    // copy the left and right halves of the array into temporary arrays
+    // copy the left and right halves of the array irnto temporary arrays
     for (unsigned int i = 0; i < leftSize; i++)
     {
         myCopy(&array[first + i], &left[i]);

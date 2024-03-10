@@ -9,10 +9,8 @@ Average case - O(n^2) with n(n-1)/2 comparisons, n(n-1)/2 swaps, n-1 copies
 Worst case - O(n^2) with n(n-1)/2 comparisons, n(n-1)/2 swaps, n-1 copies
 Occurs when the input array is in reverse order. Each element is required to be moved forward to add the new element at the start of the array.
 
-
 Merge Sort:
 Time complexity is the same for all cases because it always divides the list in half, sorts those halves, and then merges them back.
 Best case - O(nlogn) with nlogn comparisons, 0 swaps, nlogn copies
 Average case - O(nlogn) with nlogn comparisons, 0 swaps, nlogn copies
 Worst case - O(nlogn) with nlogn comparisons, 0 swaps, nlogn copies
-
