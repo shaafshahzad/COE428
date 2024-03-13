@@ -74,6 +74,12 @@ void updateState(char input[])
     char targetInput = input[1];
     char newState = input[2];
 
+    if (newState > 'H' || newState < 'A')
+    {
+        printf("Invalid state.\n");
+        return;
+    }
+
     // loop through the states and find the current state
     for (int i = 0; i < numOfStates; ++i)
     {
@@ -159,21 +165,26 @@ void isReachable(char state, int reachable[])
 
 void deleteState(char input[])
 {
-    if (input[1]) // if there is a given state to delete
+    if (input[1]) // if there is a given state
     {
         char stateToDelete = input[1];
         for (int i = 0; i < numOfStates; i++) // loop through the states
         {
-            if (states[i] == stateToDelete && !deletedStates[i]) // if the state matches and is not already deleted
+            if (states[i] == stateToDelete) // if the state is found
             {
-                deletedStates[i] = 1; // mark the state as deleted
-                printf("Deleted.\n");
-                return;
+                if (deletedStates[i]) // if the state is deleted
+                {
+                    printf("Deleted.\n");
+                }
+                else // if the state is not deleted
+                {
+                    printf("Not deleted.\n");
+                }
+                break;
             }
         }
-        printf("Not deleted.\n");
     }
-    else // if there is no given state to delete
+    else // delete garbage
     {
         int reachable[MAX_STATES] = {0};
 
