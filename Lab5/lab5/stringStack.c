@@ -56,7 +56,7 @@ char *pop()
     fprintf(stderr, "error, cannot pop because stack is empty\n");
     return NULL;
   }
-  return stack[--top];
+  return stack[--top]; // return the top of the stack
 }
 
 /**
@@ -72,5 +72,5 @@ void push(char *thing2push)
     fprintf(stderr, "error, cannot push because stack is full\n");
     return;
   }
-  stack[top++] = thing2push;
+  stack[top++] = thing2push; // push thing2push to top of the stack
 }

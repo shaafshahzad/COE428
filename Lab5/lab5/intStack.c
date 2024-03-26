@@ -50,14 +50,14 @@ int isEmpty()
  * is printed to stderr and the value -1 (minus one) is returned.
  */
 
-char *pop()
+int pop()
 {
   if (isEmpty())
   {
     fprintf(stderr, "error, cannot pop because stack is empty\n");
-    return NULL;
+    return -1;
   }
-  return stack[--top];
+  return stack[--top]; // return the top element and decrement the top
 }
 
 /**
@@ -66,12 +66,12 @@ char *pop()
  *  If there is no more space available on the Stack, an error
  *  message is printed to stderr.
  */
-void push(char *thing2push)
+void push(int thing2push)
 {
   if (top >= 100)
   {
     fprintf(stderr, "error, cannot push because stack is full\n");
     return;
   }
-  stack[top++] = thing2push;
+  stack[top++] = thing2push; // add the element to the top and increment the top
 }
