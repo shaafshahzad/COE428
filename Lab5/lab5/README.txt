@@ -1,6 +1,7 @@
 Shaaf Shahzad, #501172227
 
-Both requirements have been implemented without any issues.
+Both requirements have been implemented.
+Part 1 does not account for case sensitivity.
 
 QUESTION 1:
 To handle standalone tags, we would need to implement logic to check the '/' before the closing '>'.
